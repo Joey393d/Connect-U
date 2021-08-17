@@ -2,11 +2,11 @@
 console.log('organizationdata.js is now connected');
 
 function Organization(orgName, website, phoneNumber, address, category){
-this.orgName = orgName;
-this.website = website;
-this.phoneNumber = phoneNumber;
-this.address = address;
-this.category = category;
+  this.orgName = orgName;
+  this.website = website;
+  this.phoneNumber = phoneNumber;
+  this.address = address;
+  this.category = category;
 }
 
 let cedarValley = new Organization('Cedar Valley Habitat for Humanity', 'https://www.cvhabitat.org/', '319-366-4485', '350 6th Ave SE Cedar Rapids, IA, 52401', 'housing');
