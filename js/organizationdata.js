@@ -8,4 +8,7 @@ this.address = address;
 this.category = category;
 }
 
-let category = ['housing', 'food', 'youth/children', 'animals'];
+let housing = ['Cedar Valley Habitat for Humanity', 'Family Promise'];
+let food = ['Feed Iowa First', 'Linn County Food Bank'];
+let youth = ['Ronald McDonald House of Eastern Iowa', 'Dream Factory'];
+let animals = ['Last Hope Animal Rescue Inc', 'Cedar Rapids AniMeals'];
