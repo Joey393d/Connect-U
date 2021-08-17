@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color:dimgrey;
+  background-color: #F0EAD2;
   width: 1200px;
   margin: 0 auto;
 }
@@ -45,5 +45,13 @@ li a:hover {
 
 main{
   margin-top: 20px;
-  outline: dotted 4px rgba(50, 50, 50, 0.5);
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  outline: solid rgba(50, 50, 50, 0.5);
+  text-align: center;
+}
+
+#phImgs{
+  margin-left: 390px;
 }
