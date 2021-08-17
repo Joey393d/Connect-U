@@ -13,11 +13,16 @@ function displayRadioValue(event) {
   let HousingYN = event.target.Housing.checked;
 
   console.log(PH1result, PH2result, PH3result, HousingYN);
-
+  let results = [PH1result, PH2result, PH3result, HousingYN];
 
   // let form = getElementById('Selection');
   // form.reset();
+
+  localStorage.setItem('results', results);
 }
+
+
+
 
 
 let formElement = document.getElementById('Selection');
