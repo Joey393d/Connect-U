@@ -34,7 +34,3 @@ console.log(housing);
 console.log(food);
 console.log(youth);
 console.log(animals);
-
-
-
-
