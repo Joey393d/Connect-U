@@ -48,7 +48,7 @@ main{
   outline: dotted 4px rgba(50, 50, 50, 0.5);
 }
 
-p {
+article {
   display: inline-block;
   width: 350px;
   padding: 20px;
