@@ -8,10 +8,8 @@ function displayName(event) {
   localStorage.setItem('name', nameAnswer);
 }
 
-
 let nameElement = document.getElementById('nameform');
 nameElement.addEventListener('submit', displayName);
-
 
 
 function displayRadioValue(event) {
@@ -30,33 +28,63 @@ function displayRadioValue(event) {
 
   localStorage.setItem('results', results);
 
-
-
   if(event.target.Food.checked){
     for(let i =0; i < foodOrgs.length; i++){
-      document.getElementById('org').innerHTML += `${foodOrgs[i].orgName} `;
+      document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].orgName} `;
+      document.createElement('li').innerHTML += `${foodOrgs[i].orgName} `;
+      document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].website} `;
+      document.createElement('a').innerHTML += `${foodOrgs[i].website} `;
+      document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].phoneNumber} `;
+      document.createElement('a').innerHTML += `${foodOrgs[i].phoneNumber} `;
+      document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].address} `;
+      document.createElement('a').innerHTML += `${foodOrgs[i].address} `;
     }
   }
+
+  if(event.target.Youth.checked){
+    for(let i =0; i < youthOrgs.length; i++){
+      document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].orgName} `;
+      document.createElement('li').innerHTML += `${youthOrgs[i].orgName} `;
+      document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].website} `;
+      document.createElement('a').innerHTML += `${youthOrgs[i].website} `;
+      document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].phoneNumber} `;
+      document.createElement('a').innerHTML += `${youthOrgs[i].phoneNumber} `;
+      document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].address} `;
+      document.createElement('a').innerHTML += `${youthOrgs[i].address} `;
+    }
+  }
+
+  if(event.target.Animals.checked){
+    for(let i =0; i < animalsOrgs.length; i++){
+      document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].orgName} `;
+      document.createElement('li').innerHTML += `${animalsOrgs[i].orgName} `;
+      document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].website} `;
+      document.createElement('a').innerHTML += `${animalsOrgs[i].website} `;
+      document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].phoneNumber} `;
+      document.createElement('a').innerHTML += `${animalsOrgs[i].phoneNumber} `;
+      document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].address} `;
+      document.createElement('a').innerHTML += `${animalsOrgs[i].address} `;
+    }
+  }
+
+  if(event.target.Housing.checked){
+    for(let i =0; i < housingOrgs.length; i++){
+      document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].orgName} `;
+      document.createElement('li').innerHTML += `${housingOrgs[i].orgName} `;
+      document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].website} `;
+      document.createElement('a').innerHTML += `${housingOrgs[i].website} `;
+      document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].phoneNumber} `;
+      document.createElement('a').innerHTML += `${housingOrgs[i].phoneNumber} `;
+      document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].address} `;
+      document.createElement('a').innerHTML += `${housingOrgs[i].address} `;
+    }
+  }
+
 }
+
 
 let formElement = document.getElementById('Selection');
 formElement.addEventListener('submit', displayRadioValue);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
