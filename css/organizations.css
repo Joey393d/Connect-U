@@ -5,7 +5,6 @@
 }
 
 body{
-  background-color: #F0EAD2;
   width: 1200px;
   margin: 0 auto;
 }
@@ -60,6 +59,7 @@ img{
   float: left;
   margin-left: 300px;
   margin-right: -300px;
+  border-radius: 20px;
 }
 
 section li{
