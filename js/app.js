@@ -1,6 +1,9 @@
 'use strict';
 console.log('app.js is now connected');
 
+
+let volunteerResults = document.getElementById('volunteerResults');
+
 function displayName(event) {
   event.preventDefault();
   console.log('this is the name submit ', event);
@@ -33,11 +36,13 @@ function displayRadioValue(event) {
       document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].orgName} `;
       document.createElement('li').innerHTML += `${foodOrgs[i].orgName} `;
       document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].website} `;
-      document.createElement('a').innerHTML += `${foodOrgs[i].website} `;
+      document.createElement('li').innerHTML += `${foodOrgs[i].website} `;
       document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].phoneNumber} `;
-      document.createElement('a').innerHTML += `${foodOrgs[i].phoneNumber} `;
+      document.createElement('li').innerHTML += `${foodOrgs[i].phoneNumber} `;
       document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].address} `;
-      document.createElement('a').innerHTML += `${foodOrgs[i].address} `;
+      document.createElement('li').innerHTML += `${foodOrgs[i].address} `;
+      let lineBreak = document.createElement('br');
+      volunteerResults.appendChild(lineBreak);
     }
   }
 
@@ -46,11 +51,11 @@ function displayRadioValue(event) {
       document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].orgName} `;
       document.createElement('li').innerHTML += `${youthOrgs[i].orgName} `;
       document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].website} `;
-      document.createElement('a').innerHTML += `${youthOrgs[i].website} `;
+      document.createElement('li').innerHTML += `${youthOrgs[i].website} `;
       document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].phoneNumber} `;
-      document.createElement('a').innerHTML += `${youthOrgs[i].phoneNumber} `;
+      document.createElement('li').innerHTML += `${youthOrgs[i].phoneNumber} `;
       document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].address} `;
-      document.createElement('a').innerHTML += `${youthOrgs[i].address} `;
+      document.createElement('li').innerHTML += `${youthOrgs[i].address} `;
     }
   }
 
@@ -59,11 +64,11 @@ function displayRadioValue(event) {
       document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].orgName} `;
       document.createElement('li').innerHTML += `${animalsOrgs[i].orgName} `;
       document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].website} `;
-      document.createElement('a').innerHTML += `${animalsOrgs[i].website} `;
+      document.createElement('li').innerHTML += `${animalsOrgs[i].website} `;
       document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].phoneNumber} `;
-      document.createElement('a').innerHTML += `${animalsOrgs[i].phoneNumber} `;
+      document.createElement('li').innerHTML += `${animalsOrgs[i].phoneNumber} `;
       document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].address} `;
-      document.createElement('a').innerHTML += `${animalsOrgs[i].address} `;
+      document.createElement('li').innerHTML += `${animalsOrgs[i].address} `;
     }
   }
 
@@ -72,14 +77,14 @@ function displayRadioValue(event) {
       document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].orgName} `;
       document.createElement('li').innerHTML += `${housingOrgs[i].orgName} `;
       document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].website} `;
-      document.createElement('a').innerHTML += `${housingOrgs[i].website} `;
+      document.createElement('li').innerHTML += `${housingOrgs[i].website} `;
       document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].phoneNumber} `;
-      document.createElement('a').innerHTML += `${housingOrgs[i].phoneNumber} `;
+      document.createElement('li').innerHTML += `${housingOrgs[i].phoneNumber} `;
       document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].address} `;
-      document.createElement('a').innerHTML += `${housingOrgs[i].address} `;
+      document.createElement('li').innerHTML += `${housingOrgs[i].address} `;
     }
   }
-
+  //add remove event listener on submit
 }
 
 function resetPage(){
@@ -105,7 +110,7 @@ let familyPromise = new Organization('Family Promise', 'https://familypromiseofl
 
 let feedIowa = new Organization('Feed Iowa First', 'https://www.feediowa1st.com/', '319-775-0149', 'PO Box 1190 Cedar Rapids, IA, 52406', 'food');
 
-let foodBank = new Organization('Linn County Food Bank', 'http://www.linncommunityfoodbank.org/Linn_Community_Food_Bank/Welcome.html', '319-364-3543', 'First Presbyterian Church 310 5th St. SE Cedar Rapids, IA, 52401', 'food');
+let foodBank = new Organization('Linn County Food Bank', 'http://www.linncommunityfoodbank.org/Linn_Community_Food_Bank/Welcome.html', '319-364-3543', '310 5th St. SE Cedar Rapids, IA, 52401', 'food');
 
 let ronaldMcdonald = new Organization('Ronald McDonald House of Eastern Iowa', 'https://rmhc-eiwi.org/', '319-369-5192', '150 11th St NE Cedar Rapids, IA, 52402', 'youth');
 
