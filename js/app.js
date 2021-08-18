@@ -30,9 +30,12 @@ function displayRadioValue(event) {
 
   localStorage.setItem('results', results);
 
+
+
   if(event.target.Food.checked){
-    // document.getElementById('org');
-    console.log(food);
+    for(let i =0; i < foodOrgs.length; i++){
+      document.getElementById('org').innerHTML += `${foodOrgs[i].orgName} `;
+    }
   }
 }
 
@@ -82,12 +85,12 @@ let lastHope = new Organization('Last Hope Animal Rescue Inc', 'https://adopthop
 
 let aniMeals = new Organization('Cedar Rapids AniMeals', 'https://cranimeals.com/', '319-365-6201', 'PO Box 11195 Cedar Rapids, IA, 52410', 'animals');
 
-let housing = [cedarValley, familyPromise];
-let food = [feedIowa, foodBank];
-let youth = [ronaldMcdonald, dreamFactory];
-let animals = [lastHope, aniMeals];
+let housingOrgs = [cedarValley, familyPromise];
+let foodOrgs = [feedIowa, foodBank];
+let youthOrgs = [ronaldMcdonald, dreamFactory];
+let animalsOrgs = [lastHope, aniMeals];
 
-console.log(housing);
-console.log(food);
-console.log(youth);
-console.log(animals);
+console.log(housingOrgs);
+console.log(foodOrgs);
+console.log(youthOrgs);
+console.log(animalsOrgs);
