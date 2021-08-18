@@ -11,6 +11,7 @@
 
   <body>
     <header>
+
       <h1>
         Connect-U
       </h1>
@@ -28,6 +29,18 @@
           Welcome
         </p>
       </section>
+      
+      <section>
+
+        <form id='nameform'>
+          <label for="name" >Your Name</label>
+          <input id="name" type="text" required>
+
+          <input id="submit" type="submit" value="submit">
+        </form>
+        
+      </section>
+      
       <section>
         <div id= "phImgs">
           <img src="images/volunteer1.jpg" alt="placeholder image">
@@ -54,6 +67,19 @@
         </form>
 
       </section>
+      
+      <form id="Selection">
+        <input type="radio" id="Food" name="volunteer" value="PH1" checked>
+        <label for="PH1">Food</label><br>
+        <input type="radio" id="Youth" name="volunteer" value="PH2"> 
+        <label for="PH2">Youth</label><br>
+        <input type="radio" id="Animals" name="volunteer" value="PH3">
+        <label for="PH3">Animals</label><br>
+        <input type="radio" id="Housing" name="volunteer" value="PH3">
+        <label for="PH3">Housing</label><br>
+
+        <input id="submit" type="submit" value="submit">
+      </form>
       
     </main>
 

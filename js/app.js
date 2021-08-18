@@ -1,6 +1,16 @@
 'use strict';
 console.log('app.js is now connected');
 
+function displayName(event) {
+  event.preventDefault();
+  console.log('this is the name submit ', event);
+  let nameAnswer = document.getElementById('name').value;
+  localStorage.setItem('name', nameAnswer);
+}
+
+
+let nameElement = document.getElementById('nameform');
+nameElement.addEventListener('submit', displayName);
 
 
 
