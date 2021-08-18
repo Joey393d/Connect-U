@@ -82,12 +82,14 @@ function displayRadioValue(event) {
 
 }
 
+function resetPage(){
+  window.location.reload();
+}
+
+console.log(resetPage);
 
 let formElement = document.getElementById('Selection');
 formElement.addEventListener('submit', displayRadioValue);
-
-
-
 
 function Organization(orgName, website, phoneNumber, address, category){
   this.orgName = orgName;
