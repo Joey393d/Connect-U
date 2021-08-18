@@ -5,7 +5,6 @@
 }
 
 body{
-  background-color:dimgrey;
   width: 1200px;
   margin: 0 auto;
 }
@@ -25,8 +24,8 @@ h1{
   background-color: rgba(50, 50, 50, 0.5);
 }
 
-li {
-  display: inline;
+nav li {
+  display: inline-block;
 }
 
 li a {
@@ -45,24 +44,24 @@ li a:hover {
 
 main{
   margin-top: 20px;
-  outline: dotted 4px rgba(50, 50, 50, 0.5);
-}
-
-article {
-  display: inline-block;
-  width: 350px;
-  padding: 20px;
-  margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  outline: solid rgba(50, 50, 50, 0.5);
   text-align: center;
 }
 
-.aboutusimg {
-  width: 300px;
-  border-radius: 50px;
+/*div{
+  display: inline-block;
+} */
+
+img{
+  float: left;
+  margin-left: 300px;
+  margin-right: -300px;
+  border-radius: 20px;
 }
 
-.aboutush2 {
-  text-align: center;
-  font-size: 40px;
+section li{
+  list-style-type: none;
 }
