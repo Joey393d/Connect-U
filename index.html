@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>  
-    <script src="js/app.js" async defer></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Connect-U | Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
   <body>
     <header>
-
-
 
       <h1>
         Connect-U
@@ -23,14 +29,18 @@
           Welcome
         </p>
       </section>
+      
+      <section>
 
-      <form id='nameform'>
-        <label for="name" >Your Name</label>
-        <input id="name" type="text" required>
+        <form id='nameform'>
+          <label for="name" >Your Name</label>
+          <input id="name" type="text" required>
+
+          <input id="submit" type="submit" value="submit">
+        </form>
         
-        <input id="submit" type="submit" value="submit">
-      </form>
-
+      </section>
+      
       <section>
         <div id= "phImgs">
           <img src="images/volunteer1.jpg" alt="placeholder image">
@@ -41,21 +51,22 @@
       
 
       <section id= "formSpot">
+      
+        <form id="Selection">
+          <input type="radio" id="Food" name="volunteer" value="PH1" checked>
+          <label for="PH1">Food</label><br>
+          <input type="radio" id="Youth" name="volunteer" value="PH2"> 
+          <label for="PH2">Youth</label><br>
+          <input type="radio" id="Animals" name="volunteer" value="PH3">
+          <label for="PH3">Animals</label><br>
+          <input type="radio" id="Housing" name="volunteer" value="PH3">
+          <label for="PH3">Housing</label><br>
 
-        Form will go here
-
+          <input id="submit" type="submit" value="submit">
+          <input type="button" onclick="myFunction()" value="Reset">
+        </form>
 
       </section>
-
-      <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Connect-U | Home</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
-      </head>
-
       
       <form id="Selection">
         <input type="radio" id="Food" name="volunteer" value="PH1" checked>
@@ -69,13 +80,9 @@
 
         <input id="submit" type="submit" value="submit">
       </form>
-    
-
-     
-
-
       
     </main>
+
     <footer>
       <p>
         Footer
@@ -83,6 +90,7 @@
 
     </footer>
 
-    <script src="" async defer></script>
+    <script src="js/app.js" async defer></script>
+    
   </body>
 </html>

@@ -13,6 +13,7 @@
 ## Links and Resources
 
 - [Google Fonts](https://fonts.google.com/)
+- [CR Volunteer Ideas](https://docs.google.com/document/d/1PnLF3ulB6kjzR5BCckjldp6yvMg1vCrkZnqoafzaPWs/edit?usp=sharing)
 
 ## Project Wireframes
 
