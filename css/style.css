@@ -89,4 +89,9 @@ button {
   border-radius: 5px;
   padding: 5px;
   margin: 5px; 
+
+.namedisplay{
+  text-align:center; 
+  vertical-align: middle;
+  display: table-cell;
 }

@@ -4,7 +4,7 @@ console.log('app.js is now connected');
 let resultSpot = document.getElementById('resultSpot');
 
 function displayName(event) {
-  event.preventDefault();
+  // event.preventDefault();
   console.log('this is the name submit ', event);
   let nameAnswer = document.getElementById('name').value;
   localStorage.setItem('name', nameAnswer);
@@ -12,6 +12,13 @@ function displayName(event) {
 
 let nameElement = document.getElementById('nameform');
 nameElement.addEventListener('submit', displayName);
+
+let nameElement = document.getElementById('nameform');
+nameElement.addEventListener('submit', displayName);
+
+//name display
+let NameVar = localStorage.getItem('name');
+document.getElementById('namedisplay').innerHTML = 'Hello! ' + NameVar;
 
 function displayRadioValue(event) {
   event.preventDefault();
