@@ -15,7 +15,6 @@ nameElement.addEventListener('submit', displayName);
 
 function displayRadioValue(event) {
   event.preventDefault();
-  //resetForm();
   console.log('this is the event',event);
   let PH1result = event.target.Food.checked;
   let PH2result = event.target.Youth.checked;
@@ -25,9 +24,8 @@ function displayRadioValue(event) {
   console.log(PH1result, PH2result, PH3result, HousingYN);
   let results = [PH1result, PH2result, PH3result, HousingYN];
 
-  localStorage.setItem('results', results);
-
   if(event.target.Food.checked){
+    localStorage.setItem('results', 'Hunger');
     for(let i =0; i < foodOrgs.length; i++){
       // creates the ul and sets id to volunteerResults
       let orgList = document.createElement('ul');
@@ -51,6 +49,7 @@ function displayRadioValue(event) {
   }
 
   if(event.target.Youth.checked){
+    localStorage.setItem('results', 'Youth');
     for(let i =0; i < youthOrgs.length; i++){
       // creates the ul and sets id to volunteerResults
       let orgList = document.createElement('ul');
@@ -74,6 +73,7 @@ function displayRadioValue(event) {
   }
 
   if(event.target.Animals.checked){
+    localStorage.setItem('results', 'Animals');
     for(let i =0; i < animalsOrgs.length; i++){
       // creates the ul and sets id to volunteerResults
       let orgList = document.createElement('ul');
@@ -97,6 +97,7 @@ function displayRadioValue(event) {
   }
 
   if(event.target.Housing.checked){
+    localStorage.setItem('results', 'Housing');
     for(let i =0; i < housingOrgs.length; i++){
       // creates the ul and sets id to volunteerResults
       let orgList = document.createElement('ul');
@@ -118,51 +119,7 @@ function displayRadioValue(event) {
       resultSpot.appendChild(orgList);
     }
   }
-
-
-
-
-
-
-  // if(event.target.Youth.checked){
-  //   for(let i =0; i < youthOrgs.length; i++){
-  //     document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].orgName} `;
-  //     document.createElement('li').innerHTML += `${youthOrgs[i].orgName} `;
-  //     document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].website} `;
-  //     document.createElement('li').innerHTML += `${youthOrgs[i].website} `;
-  //     document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].phoneNumber} `;
-  //     document.createElement('li').innerHTML += `${youthOrgs[i].phoneNumber} `;
-  //     document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].address} `;
-  //     document.createElement('li').innerHTML += `${youthOrgs[i].address} `;
-  //   }
-  // }
-
-  // if(event.target.Animals.checked){
-  //   for(let i =0; i < animalsOrgs.length; i++){
-  //     document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].orgName} `;
-  //     document.createElement('li').innerHTML += `${animalsOrgs[i].orgName} `;
-  //     document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].website} `;
-  //     document.createElement('li').innerHTML += `${animalsOrgs[i].website} `;
-  //     document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].phoneNumber} `;
-  //     document.createElement('li').innerHTML += `${animalsOrgs[i].phoneNumber} `;
-  //     document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].address} `;
-  //     document.createElement('li').innerHTML += `${animalsOrgs[i].address} `;
-  //   }
-  // }
-
-  // if(event.target.Housing.checked){
-  //   for(let i =0; i < housingOrgs.length; i++){
-  //     document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].orgName} `;
-  //     document.createElement('li').innerHTML += `${housingOrgs[i].orgName} `;
-  //     document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].website} `;
-  //     document.createElement('li').innerHTML += `${housingOrgs[i].website} `;
-  //     document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].phoneNumber} `;
-  //     document.createElement('li').innerHTML += `${housingOrgs[i].phoneNumber} `;
-  //     document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].address} `;
-  //     document.createElement('li').innerHTML += `${housingOrgs[i].address} `;
-  //   }
-  // }
-  //add remove event listener on submit
+  resetForm();
 }
 
 // TODO: if condition to check whether orgList exists, if yes then clear out resultSpot first before running displayRadioValue, else if not then go ahead and just run displayRadioValue
@@ -170,15 +127,15 @@ function displayRadioValue(event) {
 let formElement = document.getElementById('Selection');
 formElement.addEventListener('submit', displayRadioValue);
 
-// function resetForm(){
-//   formElement.reset();
-// }
+function resetForm(){
+  formElement.reset();
+}
 
-// function resetPage(){
-//   window.location.reload();
-// }
+function resetPage(){
+  window.location.reload();
+}
 
-//console.log(resetPage);
+console.log(resetPage);
 
 function Organization(orgName, website, phoneNumber, address, category){
   this.orgName = orgName;
@@ -194,7 +151,7 @@ let familyPromise = new Organization('Family Promise', 'https://familypromiseofl
 
 let feedIowa = new Organization('Feed Iowa First', 'https://www.feediowa1st.com/', '319-775-0149', 'PO Box 1190 Cedar Rapids, IA, 52406', 'food');
 
-let foodBank = new Organization('Linn County Food Bank', 'http://www.linncommunityfoodbank.org/Linn_Community_Food_Bank/Welcome.html', '319-364-3543', '310 5th St. SE Cedar Rapids, IA, 52401', 'food');
+let foodBank = new Organization('Linn County Food Bank', 'http://www.linncommunityfoodbank.org/', '319-364-3543', '310 5th St. SE Cedar Rapids, IA, 52401', 'food');
 
 let ronaldMcdonald = new Organization('Ronald McDonald House of Eastern Iowa', 'https://rmhc-eiwi.org/', '319-369-5192', '150 11th St NE Cedar Rapids, IA, 52402', 'youth');
 
