@@ -5,6 +5,7 @@
 }
 
 body{
+  background-color: #F0EAD2;
   width: 1200px;
   margin: 0 auto;
 }
@@ -22,13 +23,15 @@ h1{
   text-align: center;
   text-shadow: rgba(50, 50, 50, 0.5);
   background-color: rgba(50, 50, 50, 0.5);
+  box-shadow: 2px 2px 2px gray;
+  border-radius: 5px;
 }
 
-nav li {
+header li {
   display: inline-block;
 }
 
-li a {
+header li a {
   display: inline-block;
   color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -40,6 +43,7 @@ li a {
 
 li a:hover {
   background-color: #111;
+  color: white;
 }
 
 main{
@@ -47,13 +51,11 @@ main{
   margin-right: auto;
   margin-bottom: 20px;
   margin-left: auto;
-  outline: solid rgba(50, 50, 50, 0.5);
   text-align: center;
+  border:rgba(50, 50, 50, 0.5) 1px solid;
+  box-shadow: 0px 0px 4px gray;
+  border-radius: 5px;
 }
-
-/*div{
-  display: inline-block;
-} */
 
 img{
   float: left;
@@ -64,4 +66,8 @@ img{
 
 section li{
   list-style-type: none;
+}
+
+#namedisplay{
+  font-size: 20px;
 }

@@ -13,12 +13,9 @@ function displayName(event) {
 let nameElement = document.getElementById('nameform');
 nameElement.addEventListener('submit', displayName);
 
-let nameElement = document.getElementById('nameform');
-nameElement.addEventListener('submit', displayName);
-
 //name display
 let NameVar = localStorage.getItem('name');
-document.getElementById('namedisplay').innerHTML = 'Hello! ' + NameVar;
+document.getElementById('namedisplay').innerHTML = 'Hello ' + NameVar + '!';
 
 function displayRadioValue(event) {
   event.preventDefault();
@@ -26,10 +23,10 @@ function displayRadioValue(event) {
   let PH1result = event.target.Food.checked;
   let PH2result = event.target.Youth.checked;
   let PH3result = event.target.Animals.checked;
-  let HousingYN = event.target.Housing.checked;
+  let PH4result = event.target.Housing.checked;
 
-  console.log(PH1result, PH2result, PH3result, HousingYN);
-  let results = [PH1result, PH2result, PH3result, HousingYN];
+  console.log(PH1result, PH2result, PH3result, PH4result);
+  //let results = [PH1result, PH2result, PH3result, PH4result];
 
   if(event.target.Food.checked){
     localStorage.setItem('results', 'Hunger');
