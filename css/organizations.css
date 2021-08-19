@@ -42,18 +42,19 @@ li a:hover {
   background-color: #111;
 }
 
+#namedisplay{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 main{
   margin-top: 20px;
   margin-right: auto;
   margin-bottom: 20px;
   margin-left: auto;
-  outline: solid rgba(50, 50, 50, 0.5);
+  /*outline: solid rgba(50, 50, 50, 0.5);*/
   text-align: center;
 }
-
-/*div{
-  display: inline-block;
-} */
 
 img{
   float: left;
