@@ -30,8 +30,8 @@
           <label for="name" >What's your name?</label>
           <input id="name" type="text" required>
 
-
           <input id="submit" type="submit" value="Submit">
+          
         </form>
         <br>
       </section>
@@ -46,7 +46,24 @@
       <br>
     
       <section id= "formSpot">
+
+        <h2> What cause are you interested in? </h2>
+      
+        <form id="Selection">
+          <input type="radio" id="Food" name="volunteer" value="PH1" checked>
+          <label for="PH1">Hunger</label><br>
+          <input type="radio" id="Youth" name="volunteer" value="PH2"> 
+          <label for="PH2">Youth</label><br>
+          <input type="radio" id="Animals" name="volunteer" value="PH3">
+          <label for="PH3">Animal Rescue</label><br>
+          <input type="radio" id="Housing" name="volunteer" value="PH3">
+          <label for="PH3">Housing</label><br>
+
+          <br>
+
+
         <div id="namedisplay"></div>
+
         <fieldset>
           <legend> What cause are you interested in? </legend>
         
@@ -75,8 +92,21 @@
       <section id="resultSpot">
        <!-- <ul id="volunteerResults">
 
-
       </ul> -->
+
+          <button type="submit" value="submit"  id="submit">Submit</button>
+          <button type="reset" value="Reset" onclick="resetPage();">Reset</button>
+          
+        </form>
+      </section>
+
+      <br>
+
+      <section id="resultSpot">
+       <ul id="volunteerResults">
+
+
+      </ul>
 
       </section>
       
