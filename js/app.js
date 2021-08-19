@@ -1,8 +1,6 @@
 'use strict';
 console.log('app.js is now connected');
 
-let volunteerResults = document.getElementById('volunteerResults');
-
 let resultSpot = document.getElementById('resultSpot');
 
 function displayName(event) {
@@ -36,70 +34,6 @@ function displayRadioValue(event) {
       // creates the ul and sets id to volunteerResults
       let orgList = document.createElement('ul');
       orgList.setAttribute('id', 'volunteerResults');
-
-  localStorage.setItem('results', results);
-
-  if(event.target.Food.checked){
-    for(let i =0; i < foodOrgs.length; i++){
-      document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].orgName} `;
-      document.createElement('li').innerHTML += `${foodOrgs[i].orgName} `;
-      document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].website} `;
-      document.createElement('li').innerHTML += `${foodOrgs[i].website} `;
-      document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].phoneNumber} `;
-      document.createElement('li').innerHTML += `${foodOrgs[i].phoneNumber} `;
-      document.getElementById('volunteerResults').innerHTML += `${foodOrgs[i].address} `;
-      document.createElement('li').innerHTML += `${foodOrgs[i].address} `;
-      let lineBreak = document.createElement('br');
-      volunteerResults.appendChild(lineBreak);
-    }
-  }
-
-  if(event.target.Youth.checked){
-    for(let i =0; i < youthOrgs.length; i++){
-      document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].orgName} `;
-      document.createElement('li').innerHTML += `${youthOrgs[i].orgName} `;
-      document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].website} `;
-      document.createElement('li').innerHTML += `${youthOrgs[i].website} `;
-      document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].phoneNumber} `;
-      document.createElement('li').innerHTML += `${youthOrgs[i].phoneNumber} `;
-      document.getElementById('volunteerResults').innerHTML += `${youthOrgs[i].address} `;
-      document.createElement('li').innerHTML += `${youthOrgs[i].address} `;
-    }
-  }
-
-  if(event.target.Animals.checked){
-    for(let i =0; i < animalsOrgs.length; i++){
-      document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].orgName} `;
-      document.createElement('li').innerHTML += `${animalsOrgs[i].orgName} `;
-      document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].website} `;
-      document.createElement('li').innerHTML += `${animalsOrgs[i].website} `;
-      document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].phoneNumber} `;
-      document.createElement('li').innerHTML += `${animalsOrgs[i].phoneNumber} `;
-      document.getElementById('volunteerResults').innerHTML += `${animalsOrgs[i].address} `;
-      document.createElement('li').innerHTML += `${animalsOrgs[i].address} `;
-    }
-  }
-
-  if(event.target.Housing.checked){
-    for(let i =0; i < housingOrgs.length; i++){
-      document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].orgName} `;
-      document.createElement('li').innerHTML += `${housingOrgs[i].orgName} `;
-      document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].website} `;
-      document.createElement('li').innerHTML += `${housingOrgs[i].website} `;
-      document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].phoneNumber} `;
-      document.createElement('li').innerHTML += `${housingOrgs[i].phoneNumber} `;
-      document.getElementById('volunteerResults').innerHTML += `${housingOrgs[i].address} `;
-      document.createElement('li').innerHTML += `${housingOrgs[i].address} `;
-    }
-  }
-  //add remove event listener on submit
-}
-
-function resetPage(){
-  window.location.reload();
-}
-
-console.log(resetPage);
 
       // creates an li for the org name, sets the text content to the orgName of the object at position i, and then appends the li to the ul
       let orgName = document.createElement('li');
@@ -194,7 +128,6 @@ console.log(resetPage);
 
 // TODO: if condition to check whether orgList exists, if yes then clear out resultSpot first before running displayRadioValue, else if not then go ahead and just run displayRadioValue
 
-
 let formElement = document.getElementById('Selection');
 formElement.addEventListener('submit', displayRadioValue);
 
@@ -221,8 +154,6 @@ let cedarValley = new Organization('Cedar Valley Habitat for Humanity', 'https:/
 let familyPromise = new Organization('Family Promise', 'https://familypromiseoflinncounty.org/', '319-540-6494', '610 31st Street SE Cedar Rapids, IA, 52403', 'housing');
 
 let feedIowa = new Organization('Feed Iowa First', 'https://www.feediowa1st.com/', '319-775-0149', 'PO Box 1190 Cedar Rapids, IA, 52406', 'food');
-
-let foodBank = new Organization('Linn County Food Bank', 'http://www.linncommunityfoodbank.org/Linn_Community_Food_Bank/Welcome.html', '319-364-3543', '310 5th St. SE Cedar Rapids, IA, 52401', 'food');
 
 let foodBank = new Organization('Linn County Food Bank', 'http://www.linncommunityfoodbank.org/', '319-364-3543', '310 5th St. SE Cedar Rapids, IA, 52401', 'food');
 

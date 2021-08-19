@@ -63,9 +63,6 @@ main{
   border-radius: 5px;
 }
 
-#resultSpot{
-  width: 300px;
-
 #resultSpot li{
   list-style-type: none;
 }
