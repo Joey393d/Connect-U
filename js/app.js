@@ -1,11 +1,12 @@
 'use strict';
 console.log('app.js is now connected');
 
-
 let volunteerResults = document.getElementById('volunteerResults');
 
+let resultSpot = document.getElementById('resultSpot');
+
 function displayName(event) {
-  event.preventDefault();
+  // event.preventDefault();
   console.log('this is the name submit ', event);
   let nameAnswer = document.getElementById('name').value;
   localStorage.setItem('name', nameAnswer);
@@ -14,6 +15,12 @@ function displayName(event) {
 let nameElement = document.getElementById('nameform');
 nameElement.addEventListener('submit', displayName);
 
+let nameElement = document.getElementById('nameform');
+nameElement.addEventListener('submit', displayName);
+
+//name display
+let NameVar = localStorage.getItem('name');
+document.getElementById('namedisplay').innerHTML = 'Hello! ' + NameVar;
 
 function displayRadioValue(event) {
   event.preventDefault();
@@ -26,8 +33,12 @@ function displayRadioValue(event) {
   console.log(PH1result, PH2result, PH3result, HousingYN);
   let results = [PH1result, PH2result, PH3result, HousingYN];
 
-  // let form = getElementById('Selection');
-  // form.reset();
+  if(event.target.Food.checked){
+    localStorage.setItem('results', 'Hunger');
+    for(let i =0; i < foodOrgs.length; i++){
+      // creates the ul and sets id to volunteerResults
+      let orgList = document.createElement('ul');
+      orgList.setAttribute('id', 'volunteerResults');
 
   localStorage.setItem('results', results);
 
@@ -93,8 +104,112 @@ function resetPage(){
 
 console.log(resetPage);
 
+      // creates an li for the org name, sets the text content to the orgName of the object at position i, and then appends the li to the ul
+      let orgName = document.createElement('li');
+      orgName.textContent = foodOrgs[i].orgName;
+      orgList.appendChild(orgName);
+
+      let orgSite = document.createElement('li');
+      orgSite.textContent = foodOrgs[i].website;
+      orgList.appendChild(orgSite);
+
+      let orgPhone = document.createElement('li');
+      orgPhone.textContent = foodOrgs[i].phoneNumber;
+      orgList.appendChild(orgPhone);
+
+      resultSpot.appendChild(orgList);
+    }
+  }
+
+  if(event.target.Youth.checked){
+    localStorage.setItem('results', 'Youth');
+    for(let i =0; i < youthOrgs.length; i++){
+      // creates the ul and sets id to volunteerResults
+      let orgList = document.createElement('ul');
+      orgList.setAttribute('id', 'volunteerResults');
+
+      // creates an li for the org name, sets the text content to the orgName of the object at position i, and then appends the li to the ul
+      let orgName = document.createElement('li');
+      orgName.textContent = youthOrgs[i].orgName;
+      orgList.appendChild(orgName);
+
+      let orgSite = document.createElement('li');
+      orgSite.textContent = youthOrgs[i].website;
+      orgList.appendChild(orgSite);
+
+      let orgPhone = document.createElement('li');
+      orgPhone.textContent = youthOrgs[i].phoneNumber;
+      orgList.appendChild(orgPhone);
+
+      resultSpot.appendChild(orgList);
+    }
+  }
+
+  if(event.target.Animals.checked){
+    localStorage.setItem('results', 'Animals');
+    for(let i =0; i < animalsOrgs.length; i++){
+      // creates the ul and sets id to volunteerResults
+      let orgList = document.createElement('ul');
+      orgList.setAttribute('id', 'volunteerResults');
+
+      // creates an li for the org name, sets the text content to the orgName of the object at position i, and then appends the li to the ul
+      let orgName = document.createElement('li');
+      orgName.textContent = animalsOrgs[i].orgName;
+      orgList.appendChild(orgName);
+
+      let orgSite = document.createElement('li');
+      orgSite.textContent = animalsOrgs[i].website;
+      orgList.appendChild(orgSite);
+
+      let orgPhone = document.createElement('li');
+      orgPhone.textContent = animalsOrgs[i].phoneNumber;
+      orgList.appendChild(orgPhone);
+
+      resultSpot.appendChild(orgList);
+    }
+  }
+
+  if(event.target.Housing.checked){
+    localStorage.setItem('results', 'Housing');
+    for(let i =0; i < housingOrgs.length; i++){
+      // creates the ul and sets id to volunteerResults
+      let orgList = document.createElement('ul');
+      orgList.setAttribute('id', 'volunteerResults');
+
+      // creates an li for the org name, sets the text content to the orgName of the object at position i, and then appends the li to the ul
+      let orgName = document.createElement('li');
+      orgName.textContent = housingOrgs[i].orgName;
+      orgList.appendChild(orgName);
+
+      let orgSite = document.createElement('li');
+      orgSite.textContent = housingOrgs[i].website;
+      orgList.appendChild(orgSite);
+
+      let orgPhone = document.createElement('li');
+      orgPhone.textContent = housingOrgs[i].phoneNumber;
+      orgList.appendChild(orgPhone);
+
+      resultSpot.appendChild(orgList);
+    }
+  }
+  resetForm();
+}
+
+// TODO: if condition to check whether orgList exists, if yes then clear out resultSpot first before running displayRadioValue, else if not then go ahead and just run displayRadioValue
+
+
 let formElement = document.getElementById('Selection');
 formElement.addEventListener('submit', displayRadioValue);
+
+function resetForm(){
+  formElement.reset();
+}
+
+function resetPage(){
+  window.location.reload();
+}
+
+console.log(resetPage);
 
 function Organization(orgName, website, phoneNumber, address, category){
   this.orgName = orgName;
@@ -111,6 +226,8 @@ let familyPromise = new Organization('Family Promise', 'https://familypromiseofl
 let feedIowa = new Organization('Feed Iowa First', 'https://www.feediowa1st.com/', '319-775-0149', 'PO Box 1190 Cedar Rapids, IA, 52406', 'food');
 
 let foodBank = new Organization('Linn County Food Bank', 'http://www.linncommunityfoodbank.org/Linn_Community_Food_Bank/Welcome.html', '319-364-3543', '310 5th St. SE Cedar Rapids, IA, 52401', 'food');
+
+let foodBank = new Organization('Linn County Food Bank', 'http://www.linncommunityfoodbank.org/', '319-364-3543', '310 5th St. SE Cedar Rapids, IA, 52401', 'food');
 
 let ronaldMcdonald = new Organization('Ronald McDonald House of Eastern Iowa', 'https://rmhc-eiwi.org/', '319-369-5192', '150 11th St NE Cedar Rapids, IA, 52402', 'youth');
 

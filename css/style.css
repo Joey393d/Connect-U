@@ -23,13 +23,15 @@ h1{
   text-align: center;
   text-shadow: rgba(50, 50, 50, 0.5);
   background-color: rgba(50, 50, 50, 0.5);
+  box-shadow: 2px 2px 2px gray;
+  border-radius: 5px;
 }
 
-li {
-  display: inline;
+header li {
+  display: inline-block;
 }
 
-li a {
+header li a {
   display: inline-block;
   color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -41,6 +43,7 @@ li a {
 
 li a:hover {
   background-color: #111;
+  color: white;
 }
 
 main{
@@ -48,8 +51,10 @@ main{
   margin-right: auto;
   margin-bottom: 20px;
   margin-left: auto;
-  outline: solid rgba(50, 50, 50, 0.5);
   text-align: center;
+  border:rgba(50, 50, 50, 0.5) 1px solid;
+  box-shadow: 0px 0px 4px gray;
+  border-radius: 5px;
 }
 
 #phImgs > img{
@@ -60,4 +65,36 @@ main{
 
 #resultSpot{
   width: 300px;
+
+#resultSpot li{
+  list-style-type: none;
+}
+
+fieldset {
+  width: 50%;
+  border-radius: 5px;
+  background-color: #fffbeb; 
+  border: 1px solid gray;
+  font-family: Helvetica;
+  box-shadow: 0px 0px 4px gray;
+}
+
+legend {
+  background-color: #fffbeb;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 8px;
+  box-shadow: 0px 0px 4px gray;
+}
+
+button {
+  background-color: #F0EAD2;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px; 
+
+.namedisplay{
+  text-align:center; 
+  vertical-align: middle;
+  display: table-cell;
 }
