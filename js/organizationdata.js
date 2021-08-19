@@ -1,6 +1,11 @@
 'use strict';
 console.log('organizationdata.js is now connected');
 
+//name display
+let NameVar = localStorage.getItem('name');
+document.getElementById('namedisplay').innerHTML = 'Hello! ' + NameVar;
+
+
 function Organization(orgName, website, phoneNumber, address, category){
   this.orgName = orgName;
   this.website = website;

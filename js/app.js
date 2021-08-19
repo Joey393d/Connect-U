@@ -2,15 +2,22 @@
 console.log('app.js is now connected');
 
 function displayName(event) {
-  event.preventDefault();
+  // event.preventDefault();
   console.log('this is the name submit ', event);
   let nameAnswer = document.getElementById('name').value;
   localStorage.setItem('name', nameAnswer);
 }
 
 
+
+
 let nameElement = document.getElementById('nameform');
 nameElement.addEventListener('submit', displayName);
+
+//name display
+let NameVar = localStorage.getItem('name');
+document.getElementById('namedisplay').innerHTML = 'Hello! ' + NameVar;
+
 
 
 
