@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: #F0EAD2;
+  background-color: #118AB2;
   width: 1200px;
   margin: 0 auto;
 }
@@ -42,7 +42,7 @@ header li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #06D6A0;
   color: white;
 }
 
@@ -55,10 +55,11 @@ main{
   border:rgba(50, 50, 50, 0.5) 1px solid;
   box-shadow: 0px 0px 4px gray;
   border-radius: 5px;
+  clear: both;
 }
 
 article {
-  display: inline-block;
+  float: left;
   width: 350px;
   padding: 20px;
   margin-left: auto;
@@ -68,6 +69,7 @@ article {
 
 .aboutusimg {
   width: 300px;
+  height: 220px;
   border-radius: 50px;
 }
 
@@ -83,4 +85,10 @@ h2{
 
 #namedisplay{
   font-size: 20px;
+}
+
+section{
+  clear: both;
+  height: 700px;
+  margin-left: 75px;
 }

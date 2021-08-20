@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: #F0EAD2;
+  background-color: #118ab2;
   width: 1200px;
   margin: 0 auto;
 }
@@ -42,7 +42,7 @@ header li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #06D6A0;
   color: white;
 }
 
@@ -72,4 +72,10 @@ section li{
 
 #namedisplay{
   font-size: 20px;
+}
+
+hr{
+  border: black;
+  background-color: black;
+  height: 1px;
 }

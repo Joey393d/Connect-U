@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: #F0EAD2;
+  background-color: #118AB2;
   width: 1200px;
   margin: 0 auto;
 }
@@ -42,7 +42,7 @@ header li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #06D6A0;
   color: white;
 }
 
@@ -70,14 +70,15 @@ main{
 fieldset {
   width: 50%;
   border-radius: 5px;
-  background-color: #fffbeb; 
+  background-color: #073B4C; 
   border: 1px solid gray;
   font-family: Helvetica;
   box-shadow: 0px 0px 4px gray;
+  color: white;
 }
 
 legend {
-  background-color: #fffbeb;
+  background-color: #073B4C;
   border-radius: 5px;
   border: 1px solid gray;
   padding: 8px;
@@ -85,7 +86,7 @@ legend {
 }
 
 button {
-  background-color: #F0EAD2;
+  background-color: #06D6A0;
   border-radius: 5px;
   padding: 5px;
   margin: 5px; 
