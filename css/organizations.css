@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: #118ab2;
+  background-color: #F6F2F0;
   width: 1200px;
   margin: 0 auto;
 }
@@ -14,6 +14,7 @@ h1{
   font-size: 70px;
   text-align: center;
   color: black;
+  font-family: 'Dancing Script', cursive;
 }
 
 #topNav{
@@ -22,7 +23,7 @@ h1{
   font-size: 20px;
   text-align: center;
   text-shadow: rgba(50, 50, 50, 0.5);
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: #D0B49F;
   box-shadow: 2px 2px 2px gray;
   border-radius: 5px;
 }
@@ -42,8 +43,8 @@ header li a {
 }
 
 li a:hover {
-  background-color: #06D6A0;
-  color: white;
+  background-color: #F1E7DD;
+  
 }
 
 main{
@@ -55,6 +56,7 @@ main{
   border:rgba(50, 50, 50, 0.5) 1px solid;
   box-shadow: 0px 0px 4px gray;
   border-radius: 5px;
+  background-color:#E7D1C9 ;
 }
 
 img{
