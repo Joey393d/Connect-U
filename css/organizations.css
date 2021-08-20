@@ -1,7 +1,7 @@
 *{
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 body{
@@ -58,9 +58,9 @@ main{
 }
 
 img{
-  float: left;
-  margin-left: 300px;
-  margin-right: -300px;
+  /* float: left; */
+  /* margin-left: 300px; */
+  /* margin-right: -300px; */
   border-radius: 20px;
 }
 
