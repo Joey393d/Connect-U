@@ -62,6 +62,8 @@ img{
   /* margin-left: 300px; */
   /* margin-right: -300px; */
   border-radius: 20px;
+  height: auto;
+  width: 120px;
 }
 
 section li{
